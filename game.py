@@ -1,6 +1,7 @@
 import math
 import random
 import pygame
+import gc
 
 VIEW_W, VIEW_H = 800, 560
 WORLD_W = 3200
@@ -25,8 +26,11 @@ def sky_color(wave):
 
 
 def on_humanoid_rescued(humanoid):
-    """Called when the player catches a falling humanoid; add a bonus or celebration here."""
-    pass
+    """Grant the player a brief protective shield on catch without editing other functions."""
+    for obj in gc.get_objects():
+        if isinstance(obj, Player):
+            obj.invulnerable = max(obj.invulnerable, 1.2)
+            break
 
 
 def bonus_life_threshold():
