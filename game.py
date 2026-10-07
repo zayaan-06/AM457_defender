@@ -269,6 +269,8 @@ def main():
         pygame.display.flip()
     pygame.quit()
 
-
+def bonus_life_threshold():
+    """Return a score value at which the player earns an extra life, or None to disable bonus lives."""
+    return 10000
 if __name__ == "__main__":
     main()
