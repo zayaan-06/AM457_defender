@@ -13,7 +13,15 @@ PHASES = [random.uniform(0, math.tau) for _ in range(3)]
 
 def sky_color(wave):
     """Return an (r, g, b) sky colour for the current wave, or None for the default."""
-    pass
+    palette = [
+        (5, 5, 20),     # Wave 1: Deep cosmic blue (default night)
+        (20, 8, 28),    # Wave 2: Dark nebula purple
+        (28, 10, 14),   # Wave 3: Murky crimson
+        (8, 24, 20),    # Wave 4: Abyssal teal
+        (24, 18, 8),    # Wave 5: Toxic amber
+        (22, 12, 32),   # Wave 6: Deep violet
+    ]
+    return palette[(wave - 1) % len(palette)]
 
 
 def on_humanoid_rescued(humanoid):
