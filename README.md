@@ -1,6 +1,6 @@
 # Defender Repair Lab 4- PES1UG24AM457
 
-This project is a single-file Defender-lite clone using **Pygame**. It introduces students to camera wrapping, world-space vs. screen-space coordinates, and multi-stage enemy AI using a small, readable object-oriented codebase.
+This project is a single-file Defender-lite clone using **Pygame**. 
 
 ## Tasks Completed
 
